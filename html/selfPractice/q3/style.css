@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-color: blue;
+    height: 60vh;
+    width: 100vw;
+    display: grid;
+}
+.ball{
+    background-color: red;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    align-self: last baseline;
+    animation: moveX 10s ease-in-out infinite,
+    moveY 8s ease-in-out infinite alternate;
+}
+
+@keyframes moveX{
+    0% {
+        translate: 0vw;
+    }
+    100% {
+        translate: 90vw;
+    }
+}
+@keyframes moveY {
+    0%{
+        margin-bottom: 0px;
+    }
+    10%{
+        margin-bottom: 150px;
+    }
+    20%{
+        margin-bottom: 0px;
+    }
+    30%{
+        margin-bottom: 150px;
+    }
+    40%{
+        margin-bottom: 0px;
+    }
+    50%{
+        margin-bottom: 150px;
+    }
+    60%{
+        margin-bottom: 0px;
+    }
+    70%{
+        margin-bottom: 150px;
+    }
+    80%{
+        margin-bottom: 0px;
+    }
+    90%{
+        margin-bottom: 150px;
+    }
+    100%{
+        margin-bottom: 0px;
+    }
+}

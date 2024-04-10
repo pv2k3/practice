@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .outer{
+            height: 100vh;
+            min-width: 100vw;
+            background: url("../img/img1.jpg");
+            background-position: -250px -250px;
+            overflow: hidden;
+        }
+        .inner{
+            margin: auto;
+            margin-top: 20vh;
+            background: transparent;
+            backdrop-filter: blur(10px);
+            height: 60vh;
+            width: 80vw;
+            flex-direction: column;
+            background-color: rgba(255,255,255,0.1);
+            box-sizing: border-box;
+            border-radius: 50px;
+            border: 2px solid rgba(255,255,255,0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>

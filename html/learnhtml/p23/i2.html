@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 0.2s cubic-bezier(.28, -0.51, .66, 1.51);
+        }
+
+        body {
+            background-color: darkslategray;
+        }
+
+        .outer {
+            margin: 10dvh 90dvw;
+            height: 2.5rem;
+            aspect-ratio: 1;
+            background-color: lime;
+            border-radius: 30%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .line {
+            width: 2rem;
+            height: 0.25rem;
+            border-radius: 3px;
+            background-color: black;
+            transform-origin: center;
+            transform: rotate(0deg);
+        }
+
+        .translate:first-child {
+            position: absolute;
+            top: calc(10dvh + 1.25rem);
+            transform-origin: center;
+            transform: rotate(45deg);
+        }
+
+        .translate:last-child {
+            position: absolute;
+            top: calc(10dvh + 1.25rem);
+            transform-origin: center;
+            transform: rotate(-45deg);
+        }
+
+        .translate:nth-child(2) {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <script>
+        var a = document.getElementsByClassName("line");
+        var b = document.getElementsByClassName("outer");
+        var c = 0;
+        function change() {
+            if (c % 2 == 0) {
+                for (let i = 0; i < a.length; i++) {
+                    a[i].classList.add("translate");
+                }
+                c++;
+            }
+            else {
+                for (let i = 0; i < a.length; i++) {
+                    a[i].classList.remove("translate");
+                }
+                c++;
+            }
+        }
+        b[0].addEventListener("click", change);
+    </script>
+</body>
+
+</html>

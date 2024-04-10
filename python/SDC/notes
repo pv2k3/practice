@@ -1,0 +1,17 @@
+Tkinter
+1. Basic foundation of an app
+    -widgets
+    -layout
+    -styling
+
+modules - file
+packages - subpackages and files
+
+pack, grid, place
+
+tkinter variables
+
+get fetch
+
+tk.IntVar
+tk.StringVar

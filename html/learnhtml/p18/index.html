@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Card">
+    <meta name="author" content="Priyanshu">
+    <link rel="shortcut icon" href="../p1/img1.png" type="image/png">
+    <title>Card</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            transition: all 0.75s cubic-bezier(.48,-0.43,.46,1.43);
+        }
+        body{
+            background-color: aquamarine;
+        }
+        .card{
+            margin: 50px auto;
+            height: 300px;
+            width: 250px;
+            background-color: rgb(187, 185, 185);
+            color: black;
+            border: 2px solid gray;
+            border-radius: 25px;
+            padding: 5px;
+            cursor: pointer;
+        }
+        .img img{
+            height: 300px;
+            width: 250px;
+            border-radius: 20px;
+            filter: brightness(80%);
+        }
+        .img{
+            position: absolute;
+        }
+        .content{
+            left: 50%;
+            translate: -50%;
+            margin: 150px auto;
+            color: white;
+            position: absolute;
+            z-index: -1;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card"  onclick="enter()">
+        <div class="img">
+            <img src="../p1/img1.png" alt="">
+        </div>
+        <div class="content">
+            <h1>Izuku Midoriya</h1>
+            <p>
+                Student of UA high school and future symbol of piece.
+            </p>
+        </div>
+    </div>
+    <script>
+        var a = document.getElementsByClassName("content");
+        var b = document.getElementsByClassName("img");
+        var c= 0;
+        function enter(){
+            if (c%2==0) {
+                c+=1;
+                a[0].style.zIndex = "1";
+                b[0].style.filter = "brightness(35%)";
+            }
+            else{
+                c+=1;
+                a[0].style.zIndex = "-1"
+                b[0].style.filter = "brightness(80%)";
+            }
+        }
+    </script>
+</body>
+</html>

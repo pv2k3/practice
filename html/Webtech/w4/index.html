@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: black;
+            }
+            #outer{
+                height: 1000px;
+                width: 1000px;
+                margin: 0px auto;
+            }
+            .top_bottom{
+                height: 150px;
+                width: 1000px;
+                display: flex;
+            }
+            .inner-A{
+                height: 150px;
+                width: 150px;
+                background-color: rgb(0, 99, 99);
+            }
+            .inner-B{
+                height: 150px;
+                width: 350px;
+                background-color: rgb(0, 138, 138);
+            }
+            .inner-C{
+                height: 150px;
+                width: 350px;
+                background-color: rgb(79, 224, 224);
+            }
+            .inner-D{
+                height: 150px;
+                width: 150px;
+                background-color: rgb(0, 107, 107);
+            }
+            #inner2{
+                height: 700px;
+                width: 1000px;
+                display: flex;
+            }
+            .inner2_left_right{
+                height: 700px;
+                width: 150px;
+            }
+            #inner2-B{
+                height: 700px;
+                width: 700px;
+                background-color: lightgrey;
+                float: left;
+            }
+            .rectangle1{
+                height: 350px;
+                width: 150px;
+                background-color: rgb(79, 224, 224);
+            }
+            .rectangle2{
+                height: 350px;
+                width: 150px;
+                background-color: rgb(0, 138, 138);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="outer">
+            <div class="top_bottom">
+                <div class="inner-A"></div>
+                <div class="inner-B"></div>
+                <div class="inner-C"></div>
+                <div class="inner-D"></div>
+            </div>
+            <div id="inner2">
+                <div class="inner2_left_right">
+                    <div class="rectangle1"></div>
+                    <div class="rectangle2"></div>
+                </div>
+                <div id="inner2-B"></div>
+                <div class="inner2_left_right">
+                    <div class="rectangle1"></div>
+                    <div class="rectangle2"></div>
+                </div>
+            </div>
+            <div class="top_bottom">
+                <div class="inner-A"></div>
+                <div class="inner-B"></div>
+                <div class="inner-C"></div>
+                <div class="inner-D"></div>
+            </div>
+        </div>
+    </body>
+</html>

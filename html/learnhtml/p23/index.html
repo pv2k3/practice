@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .outer{
+            height: 100dvh;
+            width: 100dvw;
+            display: flex;
+        }
+        .inner{
+            border: 2px solid;
+            height: 100dvh;
+            width: 50dvw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lime;
+        }
+        .inner::after{
+            content: attr(data-content);
+            position: absolute;
+            top: 20dvh;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner" data-content="1">1</div>
+        <div class="inner" data-content="2">2</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #email-label {
+            font-size: 1.25rem;
+            height: 40px;
+            width: 20%;
+            position: absolute;
+            left: 32px;
+            display: flex;
+            align-items: center;
+        }
+        #email {
+            display: flex;
+            align-items: self-end;
+            top: 10px;
+            font-size: 1rem;
+            height: 40px;
+            width: 30%;
+            background: transparent;
+            position: absolute;
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" method="get">
+        <div class="content">
+            <label for="email" id="email-label">Enter email</label>
+            <input type="email" name="email" id="email" onclick="Move()">
+        </div>
+    </form>
+
+    <script>
+        var label = document.getElementById("email-label");
+        console.log(label);
+
+        function Move(){
+            label.style.left = "16px";
+            label.style.top = "12px";
+            label.style.alignItems = "normal";
+            label.style.fontSize = "0.75rem";
+        }
+    </script>
+</body>
+</html>

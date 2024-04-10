@@ -1,0 +1,49 @@
+.div{
+    width: 250px;
+    height: 300px;
+    position: relative;
+    background-color: #000;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    box-shadow: rgb(18,28,39) 0px 20px 30px -10px;
+}
+.div::before{
+    content: "";
+    width: 100px;
+    height: 130%;
+    background-color: #6770f3;
+    position: absolute;
+    box-shadow: 0px 0px 20px rgb(8,8,8);
+    animation: animate 2s linear infinite;
+}
+.div::after{
+    content: "";
+    inset: 10px;
+    position: absolute;
+    background-color: #081438;
+    border-radius: 11px;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+        background-color: #f61737;
+    }
+    30%{
+        background-color: #f918ea;
+    }
+    50%{
+        background-color: #ffb061;
+    }
+    60%{
+        background-color: #38cff1;
+    }
+    70%{
+        background-color: #61ff70;
+    }
+    100%{
+        transform: rotate(360deg);
+        background-color: #3633f2;
+    }
+}

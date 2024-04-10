@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <style>
+        *{
+            margin: 0;padding: 0;box-sizing: border-box ;
+        }
+        body{
+            background-color: black;
+        }
+        .container{
+            padding: 24px;
+            width: 70vw;
+            display: flexbox;
+            align-content: center;
+            justify-content: center;
+            background-color: rgb(20, 20, 20);
+            margin: 25px auto;
+        }
+        .card{
+            margin-top: 24px;
+            width: 60vw;
+            color: white;
+            position: relative;
+            display: none;
+        }
+        .card1{
+            width: 60vw;
+            color: white;
+            position: relative;
+            display: flex;
+            align-items: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card1" onclick="action()">
+            <h1>How to open youe Instagram page</h1>
+        </div>
+        <div class="card">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime tenetur repellat repellendus praesentium ullam odio autem qui id veritatis quo expedita ab harum, obcaecati animi at saepe libero ad voluptates eum beatae porro deserunt quam.</p>
+        </div>
+        <div class="card">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, vel quia harum voluptate quibusdam vero laudantium maxime nesciunt nisi facere ad doloremque? Eveniet, ea. Possimus incidunt est quis aut, nemo autem vel. Nisi voluptatem praesentium esse soluta! Incidunt quo nihil rerum, esse unde iure nobis excepturi beatae cupiditate vel iste.</p>
+        </div>
+    </div>
+    <script>
+        var Drop = document.getElementsByClassName("card");
+        var c = 0;
+        function action(){
+            if (c%2==0) {
+                for (let i = 0; i < Drop.length; i++) {
+                    Drop[i].style.display = "block";
+                }
+                c = c+1;
+            }
+            else{
+                for (let i = 0; i < Drop.length; i++) {
+                    Drop[i].style.display = "none";
+                }
+                c = c+1;
+            }
+        }
+    </script>
+</body>
+</html>

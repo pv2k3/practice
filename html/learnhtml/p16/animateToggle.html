@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+            transition: all 1s cubic-bezier(.57,-0.47,.37,1.45) 0.1s;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            height: 88px;
+            width: 272px;
+            border-radius: 44px;
+            display: flex;
+            background-color: rgb(2, 166, 216);
+            border: 4px solid rgb(24, 21, 209);
+            align-items: center;
+            padding: 12px;
+            justify-content: space-between;
+            cursor: pointer;
+            scale: 1.25;
+        }
+        .circle{
+            border-radius: 50%;
+            height: 64px;
+            aspect-ratio: 1;
+            background-color: rgb(250, 183, 0);
+            position: absolute;
+            z-index: 1;
+            border: 3px solid rgb(165, 126, 0);
+        }
+    </style>
+</head> 
+<body>
+    <div class="container" onclick="move()">
+        <div class="circle"></div>
+    </div>      
+    <script>
+        var count = 0;
+        var Circle = document.getElementsByClassName("circle");
+        var Container = document.getElementsByClassName("container");
+        function move(){
+            if(count%2==0){
+                Circle[0].style.translate = "176px";
+                Circle[0].style.backgroundColor = "rgb(146, 146, 146)";
+                Circle[0].style.borderColor = "rgb(100, 98, 98)";
+                document.body.style.backgroundColor = "black";
+                Container[0].style.backgroundColor = "rgb(10,0,44)";
+                Container[0].style.borderColor = "rgb(40, 7, 150)";
+                count +=1;
+            }
+            else{
+                Circle[0].style.translate = "0px";
+                Circle[0].style.backgroundColor = "rgb(250, 183, 0)";
+                Circle[0].style.borderColor = "rgb(165, 126, 0)";
+                document.body.style.backgroundColor = "white";
+                Container[0].style.backgroundColor = "rgb(2, 166, 216)";
+                Container[0].style.borderColor = "rgb(24, 21, 209)";
+                count +=1;
+            }
+        }
+    </script>
+</body>
+</html>

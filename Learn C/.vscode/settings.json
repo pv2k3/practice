@@ -1,0 +1,7 @@
+{
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "SNAKEL~1.C": "cpp",
+        "PATTERN.C": "cpp"
+    }
+}

@@ -1,0 +1,20 @@
+#first{
+    height: 600px;
+    width: 400px;
+    margin:0px auto;
+    border: 2px solid;
+    border-radius: 50px;
+    background-color: aquamarine;
+}
+#inner{
+    height: 550px;
+    width: 350px;
+    margin: 25px auto; 
+}
+#first #inner video{
+    aspect-ratio: 9/16;
+    justify-content: space-around;
+    background-color: rgb(236, 195, 195);
+    border-radius: 25px;
+    margin: 0px auto;
+}

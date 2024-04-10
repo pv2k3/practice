@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 1s cubic-bezier(.25,-0.2,.75,1.22);
+        }
+        .sidebar{
+            height: 100vh;
+            width: 15vw;
+            background-color: black;
+            position: absolute;
+        }
+        img{
+            height: 48px;
+            object-fit: contain;
+        }
+        .box{
+            height: 72px;
+            width: 60%;
+            display: flex;
+            background-color: gray;
+            margin-top: 16px;
+        }
+        h1{
+            color: aliceblue;
+            background-color: transparent;
+            background-color: rgba(128, 128, 128, 0.6);
+            height: 72px;
+            cursor: pointer;
+        }
+        .card{
+            position: relative;
+            display: block;
+            margin-left: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <nav>
+            <h1 class="a"  onclick="swap()">Dropdown</h1>
+            <div class="card">
+                <div class="box">
+                    <a href="dropdown.html"><img src="../p1/img1.png" alt=""><p>Drop</p></a>
+                </div>
+                <div class="box">
+                    <a href="dropdown.html"><img src="../p1/img1.png" alt=""><p>Hello</p></a>
+                </div>
+                <div class="box">
+                    <a href="dropdown.html"><img src="../p1/img1.png" alt=""><p>Everyone</p></a>
+                </div>
+                <div class="box">
+                    <a href="dropdown.html"><img src="../p1/img1.png" alt=""><p>I</p></a>
+                </div>
+                <div class="box">
+                    <a href="dropdown.html"><img src="../p1/img1.png" alt=""><p>am</p></a>
+                </div>
+                <div class="box">
+                    <a href="dropdown.html"><img src="../p1/img1.png" alt=""><p>Priyanshu</p></a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <script>
+        var menu = document.getElementsByClassName("card");
+        var sidebar = document.getElementsByClassName("sidebar");
+        var c = 0;
+
+        function swap(){
+            if (c%2==0) {
+                menu[0].style.left = "-150vw";
+                sidebar[0].style.backgroundColor = "white";
+                c = c+1;
+                sidebar[0].childNodes[1].childNodes[1].style.color = "black";
+            }
+            else if(c%2==1){
+                menu[0].style.left = "0px"
+                sidebar[0].style.backgroundColor = "black";
+                c = c+1;
+                sidebar[0].childNodes[1].childNodes[1].style.color = "white";
+            }
+        }
+    </script>
+</body>
+</html>
