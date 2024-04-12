@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .outer {
+        min-height: 100dvh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(91, 91, 185);
+      }
+      .box {
+        background: transparent;
+        background-color: rgba(0, 255, 0, 0.2);
+        backdrop-filter: blur(10px);
+        width: 500px;
+        height: 300px;
+        border: 1px solid gray;
+        border-radius: 25px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .inner {
+        width: 25%;
+        height: 4rem;
+        border: 2px solid red;
+        border-radius: 12px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        font-weight: 800;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="box">
+        <div id="hours" class="inner"></div>
+        <div id="min" class="inner"></div>
+        <div id="sec" class="inner"></div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var hours = document.getElementById("hours");
+    var min = document.getElementById("min");
+    var sec = document.getElementById("sec");
+    let d = new Date();
+    let a = () => {
+      hours.innerText = d.getHours();
+      min.innerText = d.getMinutes();
+      sec.innerText = d.getSeconds();
+    };
+  </script>
+</html>
