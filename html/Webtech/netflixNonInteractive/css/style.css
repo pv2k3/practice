@@ -9,8 +9,7 @@ body {
 }
 
 .outer{
-    /* width: calc(100dvw - 1rem); */
-    width: 100%;
+    /* width: 100%; */
     overflow: hidden;
 }
 
