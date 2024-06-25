@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: white;
+    background: linear-gradient(45deg,black 85%, red 120%);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.outer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+.content{
+    font-family: iceland, sans-serif;
+    font-size: 1.25rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+p{
+    margin: 1.5rem 0;
+}
+.leftGreet h1{
+    font-size: 20rem;
+    letter-spacing: -1vw;
+    font-family: 'Big Shoulders Display';
+    color: #E84A4A;
+}
+.content h2{
+    margin: 1rem 0;
+    font-size: 1.625rem;
+}
+
+button{
+    font-family: 'Big Shoulders Display';
+    border-radius: none;
+    border: 2px solid #E84A4A;
+    background-color: transparent;
+    height: 3.5rem;
+    width: 16rem;
+}
+button a{
+    color: #E84A4A;
+    text-decoration-line: none;
+    font-size: 1.375rem;
+}
+
+
+/* Next web */
+
+
