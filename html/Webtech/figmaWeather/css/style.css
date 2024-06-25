@@ -37,7 +37,7 @@ img[alt="vector2"] {
 }
 
 h1 {
-	font-size: 3rem;
+	font-size: 2.5rem;
 	color: rgb(255, 251, 246);
 }
 
@@ -48,7 +48,7 @@ h1 {
 	padding: 20px;
 	box-shadow: 0 0 30px rgba(165, 112, 112, 0.1);
 	transition: transform 0.3s ease-in-out;
-	width: 450px;
+	width: 30rem;
 }
 
 .weather-card:hover {
@@ -93,44 +93,53 @@ h1 {
 	display: none;
 }
 
+#city-name {
+	color: rgba(185, 71, 185, 0.623);
+	font-size: 1.5rem;
+}
+
 #temperature {
-	font-size: 24px;
+	font-size: 1.25rem;
 	font-weight: bold;
-	margin: 8px 0;
+	color: rgb(157, 241, 234);
+	object-fit: contain;
 }
 
 #description {
-	font-size: 18px;
-	margin-bottom: 10px;
+	color: rgb(157, 241, 234);
+	font-size: 1rem;	
+	object-fit: contain;
 }
 
 #wind-speed {
-	font-size: 16px;
-	color: rgb(255, 0, 0);
+	font-size: 1rem;
+	color: rgb(157, 241, 234);
+	object-fit: contain;
 }
 
 #date {
-	font-size: 14px;
-	color: rgb(255, 0, 0);
+	font-size: 0.75rem;
+	color: rgb(157, 241, 234);
+	object-fit: contain;
 }
 
 .content{
 	display: flex;
-		justify-content: space-around;
+	justify-content: space-around;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
 .glassmorphism{
-	backdrop-filter: blur(100%);
-	background-color: rgba(255,255,255,0.01);
-
-	height: 10rem;
+	font-weight: 600;
+	backdrop-filter: blur(10px);
+	background-color: rgba(255, 255, 255, 0.025);
+	box-shadow: 0px 0px 20px #1a6ebd73;
+	height: 6.5rem;
 	aspect-ratio: 1;
 	border-radius: 50%;
-
-
+	object-fit: contain;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
 }
